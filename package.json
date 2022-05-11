@@ -1,0 +1,19 @@
+{
+  "name": "node-ts-project",
+  "version": "1.0.0",
+  "description": "node project using typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "server-start": "node app.js",
+    "tsc": "tsc"
+  },
+  "repository": "https://github.com/pranitkhadilkar7/node-ts-project.git",
+  "author": "PranitK <Pranit.Khadilkar@talentica.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "typescript": "^4.6.4"
+  }
+}
