@@ -1,6 +1,6 @@
 export type SignupData = {
-  userName: string
+  username: string
   email: string
   country: string
-  passowrd: string
+  password: string
 }
