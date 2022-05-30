@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { signup } from "../controller/auth/auth-controller"
+import { login, signup } from "../controller/auth/auth-controller"
 import { body } from "express-validator"
 import { User } from "../modal/user"
 
@@ -34,4 +34,16 @@ authRoutes.post(
     .matches(/\d/)
     .withMessage("must contain a number"),
   signup
+)
+
+authRoutes.post(
+  "/login",
+  body("email").isEmail().normalizeEmail(),
+  body("password")
+    .exists()
+    .isLength({ min: 5 })
+    .withMessage("must be at least 5 chars long")
+    .matches(/\d/)
+    .withMessage("must contain a number"),
+  login
 )
